@@ -5,6 +5,7 @@ class Luckysheet extends React.Component {
         const luckysheet = window.luckysheet;
         luckysheet.create({
             container: "luckysheet",
+            plugins:['chart']
         });
     }
     render() {
