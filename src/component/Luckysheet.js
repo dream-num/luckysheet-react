@@ -4,8 +4,11 @@ class Luckysheet extends React.Component {
     componentDidMount() {
         const luckysheet = window.luckysheet;
         luckysheet.create({
-            container: "luckysheet",
-            plugins:['chart']
+            ...{
+                container: "luckysheet",
+                plugins: ['chart']
+            },
+            ...this.props
         });
     }
     render() {
